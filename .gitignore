@@ -1,4 +1,9 @@
 *.class
+# Netbeans Stuff
+/nbproject/private/
+/dist/
+/build/
+manifest.mf
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
@@ -57,4 +62,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-*.properties
