@@ -1,3 +1,9 @@
 # AlexUtilsMod config
 # Simply edit below!
-server-name: IslandFreedom
+
+# Name of Server
+serverName: TestServer
+# Operator Only Mode.
+opOnlyMode: false
+# Join Message
+ServerJoinMessage: Welcome to serverName, Player

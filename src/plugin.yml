@@ -12,3 +12,5 @@ commands:
         description: Ban a user
         usage: /<command> <player> <reason>
         aliases: [banhammer, gtfo]
+ 
+        

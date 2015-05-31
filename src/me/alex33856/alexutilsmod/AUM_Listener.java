@@ -6,9 +6,8 @@ To find bukkit lib go to https://github.com/Pravian/BukkitLib
  */
 package me.alex33856.alexutilsmod;
 
-import me.StevenLawson.TotalFreedomMod.TFM_AdminList;
-import me.StevenLawson.TotalFreedomMod.TFM_Util;
 import net.pravian.bukkitlib.config.YamlConfig;
+import static org.bukkit.Bukkit.broadcastMessage;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -23,6 +22,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
  */
 public class AUM_Listener implements Listener {
         public YamlConfig config;
+        public AlexUtilsMod plugin;
     
     @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true) 
     public void onBlockPlace(BlockPlaceEvent e) {
@@ -48,24 +48,16 @@ public class AUM_Listener implements Listener {
             @EventHandler
             public void OnPlayerJoin(PlayerJoinEvent e) {
                     Player player = e.getPlayer();
-                    if (!player.hasPlayedBefore())
-                        e.setJoinMessage(ChatColor.AQUA + player.getName() + " is a new player!");
-                    else
+                    if (!player.hasPlayedBefore()) {
+                        config.getString("ServerJoinMessage").replace("serverName", config.getString("ServerName"));
+                        config.getString("ServerJoinMessage".replace("player", player.getName()));
+                         e.setJoinMessage(config.getString("ServerJoinMessage"));
+                    }
+                      if (player.hasPlayedBefore())
                         e.setJoinMessage(ChatColor.AQUA + "Welcome Back, " + player.getName() + "to " + config.getString("server-name"));
                     if (player.getName().equals("Alex33856"))
                     {
-                        TFM_Util.IFM_DEVELOPERS.add(player.getName());
-                        TFM_Util.bcastMsg("Alex33856 is the " + ChatColor.DARK_PURPLE + "developer " + ChatColor.AQUA + "of AlexUtilsMod!", ChatColor.AQUA);
+                        broadcastMessage("Alex33856 is the " + ChatColor.DARK_PURPLE + "developer " + ChatColor.AQUA + "of AlexUtilsMod!");
                     }
-                    if (player.getName().equals("Ftb1122"))
-                    {
-                        TFM_Util.IFM_DEVELOPERS.add(player.getName());
-                                }
-                    if (TFM_AdminList.isSuperAdmin(player))
-                    {
-                        player.sendMessage("Welcome Back, " + player.getName() + "!");
-                    }
-                       
-                               
             }
 }
