@@ -37,7 +37,7 @@ public class AUM_Listener implements Listener {
                     player.sendMessage(ChatColor.RED + "Sorry, I Couldnt place your " + e.getBlock().getType() + " I really couldnt!");
                     break;
                 }
+                }
+                }
              }
             }
-        }
-    }

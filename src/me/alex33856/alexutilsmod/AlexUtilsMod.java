@@ -41,6 +41,7 @@ public class AlexUtilsMod extends BukkitPlugin {
     public void onEnable() 
     {
         BukkitLib.init(plugin);
+        register(new AUM_Listener());
         config = new YamlConfig(plugin, "config.yml", true);
         config.load();
         handler.setCommandLocation(Command_alexutilsmod.class.getPackage());
