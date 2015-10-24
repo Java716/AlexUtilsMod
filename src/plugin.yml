@@ -1,16 +1,13 @@
-name: AlexUtilsMod
-main: me.alex33856.alexutilsmod.AlexUtilsMod
-version: 2.5
-description: Has some extra commands for the server its used on!
+name: AlexUtilsMod-Revamped
+main: me.alex33856.alexutilsmod.AlexUtilsModRe-vamped
+version: 1.0
+description: AlexUtillsMod has extra commands for your server!
 author: Alex33856
 commands: 
     alexutilsmod:
         description: Shows you info about alexutilsmod
         usage: /<command>
-        aliases: [aum]
-    ban: 
-        description: Ban a user
-        usage: /<command> <player> <reason>
-        aliases: [banhammer, gtfo]
+        aliases: [aum, utilsmod, alexutils, um, au]
+
  
         

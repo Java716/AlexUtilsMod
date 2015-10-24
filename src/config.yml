@@ -1,9 +1,18 @@
-# AlexUtilsMod config
-# Simply edit below!
+#
+# AlexUtilsMod Config.yml
+# Version 1.0 
+# Created by Alex33856
+#
 
 # Name of Server
-serverName: TestServer
-# Operator Only Mode.
-opOnlyMode: false
+serverName: # Please enter the Server Name
 # Join Message
-ServerJoinMessage: Welcome to serverName, Player
+# Use Player for the Player name and use Server for your Server Name!!
+ServerJoinMessage: 
+
+ServerApplicationEnabled: Off
+ServerApplicationMessage: # Remove this and enter Application Message
+ServerApplicationStepOne: # Step One, Register account on forum (Something like that)
+ServerApplicationStepTwo: # Step 2
+ServerApplicationStepThree: # Step 3
+ServerApplicationStepFour: # and step four

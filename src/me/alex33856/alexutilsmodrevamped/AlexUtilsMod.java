@@ -4,9 +4,9 @@ Plugin AlexUtilsMod is public and open source
 To find bukkit lib go to https://github.com/Pravian/BukkitLib
 (C) Alex33856 2015 - 2015 This Plugin
  */
-package me.alex33856.alexutilsmod;
+package me.alex33856.alexutilsmodrevamped;
 
-import me.alex33856.alexutilsmod.commands.Command_alexutilsmod;
+import me.alex33856.alexutilsmodrevamped.commands.Command_alexutilsmod;
 import net.pravian.bukkitlib.BukkitLib;
 import net.pravian.bukkitlib.command.BukkitCommandHandler;
 import net.pravian.bukkitlib.config.YamlConfig;

@@ -4,7 +4,7 @@ Plugin AlexUtilsMod is public and open source
 To find bukkit lib go to https://github.com/Pravian/BukkitLib
 (C) Alex33856 2015 - 2015 This Plugin
  */
-package me.alex33856.alexutilsmod;
+package me.alex33856.alexutilsmodrevamped;
 
 import net.pravian.bukkitlib.config.YamlConfig;
 import static org.bukkit.Bukkit.broadcastMessage;
@@ -28,23 +28,7 @@ public class AUM_Listener implements Listener {
     public void onBlockPlace(BlockPlaceEvent e) {
         Player player = e.getPlayer();
         
-        switch (e.getBlockPlaced().getType()) {
-            case TNT: {
-                if (!player.hasPermission("AlexUtilsMod.placement.TNT")) {
-                    player.sendMessage(ChatColor.RED + "Sorry, I Couldnt place your " + e.getBlock().getType() + " I really couldnt!");
-                    break;
-                }
-            }
-            case LAVA_BUCKET:
-            case STATIONARY_LAVA:
-            case LAVA: {
-                if (!player.hasPermission("AlexUtilsMod.placement.LAVA")) {
-                    player.sendMessage(ChatColor.RED + "Sorry, I Couldnt place your " + e.getBlock().getType() + " I really couldnt!");
-                    break;
-                }
-                }
-                }
-             }
+    }
             @EventHandler
             public void OnPlayerJoin(PlayerJoinEvent e) {
                     Player player = e.getPlayer();
